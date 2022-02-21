@@ -1,2 +1,2 @@
 # KennanYang.github.io
-KennanYang的个人主页
+KennanYang's personal pages
