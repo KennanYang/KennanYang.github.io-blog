@@ -1,2 +1,2 @@
 # KennanYang.github.io
-KennanYang's personal pages
+KennanYang's personal page.
