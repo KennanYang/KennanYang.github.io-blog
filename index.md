@@ -23,8 +23,8 @@
 ### 项目研究
   1.基于解剖学引导和多视图融合的腹部多器官分割系统
 ### 文章
-1.[如何创建一个github个人主页](/article001_2022_2_21.md) 
+1.[如何创建一个github个人主页](/2022_articles/article001_2022_2_21.md) 
 
-2.[如何连接实验室的服务器进行网络训练？](/article002_2022_2_22.md) 
+2.[如何连接实验室的服务器进行网络训练？](/2022_articles/article002_2022_2_22.md) 
 
-3.[win10 安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录](/article003_2022_2_22.md) 
+3.[win10 安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录](/2022_articles/article003_2022_2_22.md) 
