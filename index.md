@@ -7,7 +7,7 @@
       <p><b>邮箱：yzw1048125026@163.com</b></p>
     </td>
     <td width="25%">
-      <img src="/yzw.jpg" width="100%">
+      <img src="/kennan.jpg" width="100%">
     </td>
   </tr>
 </table>
@@ -23,4 +23,6 @@
 ### 项目研究
   1.基于解剖学引导和多视图融合的腹部多器官分割系统
 ### 文章
-[如何创建一个github个人主页](/first_page.md) 
+[如何创建一个github个人主页](/article001_2022_2_21.md) 
+[如何连接实验室的服务器进行网络训练？](/article002_2022_2_22.md) 
+[win10 安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录](/article003_2022_2_22.md) 
