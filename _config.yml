@@ -1,2 +1,7 @@
-theme: jekyll-theme-minimal
+theme: indigo
 title: Welcome to Kennan's homepage!
+deploy:
+  repo: https://github.com/KennanYang/KennanYang.github.io.git
+  branch: gh-pages
+  url: https://KennanYang.github.io/
+
