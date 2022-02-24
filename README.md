@@ -5,4 +5,4 @@ https://kennanyang.github.io/
 
 or
 
-https://kennan-yang.top/
+http://kennan-yang.top/
