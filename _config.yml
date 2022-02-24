@@ -2,3 +2,8 @@ theme: jekyll-theme-cayman
 title: Welcome to Kennan's homepage!
 
 
+deploy:
+  type: git
+  repo: https://github.com/KennanYang/KennanYang.github.io
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: gh-pages
