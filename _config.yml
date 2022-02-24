@@ -1,13 +1,2 @@
-# theme: jekyll-theme-cayman
-# title: Welcome to Kennan's homepage!
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: landscape
-
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: https://github.com/KennanYang/KennanYang.github.io.git
-  branch: gh-pages
+theme: jekyll-theme-cayman
+title: Welcome to Kennan's homepage!
