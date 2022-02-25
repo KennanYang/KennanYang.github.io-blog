@@ -23,7 +23,7 @@ subtitle:
   showCursor: true # 是否显示光标
 
 # 网站图标和侧边栏logo
-favicon: /favicon.ico
+favicon: /images/kennan2.png
 logo: /images/kennan2.png
 
 # 封面配置
