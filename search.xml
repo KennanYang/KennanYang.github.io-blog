@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>001. 如何连接实验室的服务器进行网络训练？</title>
+    <url>/2022/02/24/001-link-to-server/</url>
+    <content><![CDATA[<p>我在用电脑训练CNN时遇到了性能瓶颈（显存不够），当得知实验室的服务器算力更强时，去请教师兄怎么连。</p>
+<p>实验室的师兄甩过来服务器的ip和用户名密码，说直接连就行。</p>
+<p>直接连？linux都不会用的小白，咋连？</p>
+<p>首先确保连接到实验室的网络，我这边是用校园网或者挂校园网的VPN，然后有下面几种配置方法（方法应该很多，只是列出了我尝试过的这三种）：</p>
+<h1 id="方法一：wsl（Windows-Subsystem-for-Linux）"><a href="#方法一：wsl（Windows-Subsystem-for-Linux）" class="headerlink" title="方法一：wsl（Windows Subsystem for Linux）"></a>方法一：wsl（Windows Subsystem for Linux）</h1><p>1.下载wsl2<br>参考<br><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">https://docs.microsoft.com/zh-cn/windows/wsl/install-win10</a></p>
+<p>2.下载windows终端windows terminal（非必须，也可直接用power shell）<br><a href="https://docs.microsoft.com/zh-cn/windows/terminal/get-started">https://docs.microsoft.com/zh-cn/windows/terminal/get-started</a></p>
+<p>3.使用ssh命令进行外部链接</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-&gt; ssh 用户@ip</span><br><span class="line">-&gt; 密码</span><br></pre></td></tr></table></figure>
+
+<h1 id="方法二：vscode"><a href="#方法二：vscode" class="headerlink" title="方法二：vscode"></a>方法二：vscode</h1><p>1.vscode下载remote-ssh和remote wsl<br><img src="https://img-blog.csdnimg.cn/20210519110928571.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
+<p>2.连接服务器</p>
+<p>选择左下角的标志<br><img src="https://img-blog.csdnimg.cn/20210519111221622.png"><br>会弹出一个菜单栏，选择Connect to Host…，输入用户名和密码即可<br><img src="https://img-blog.csdnimg.cn/20210519111159132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
+<h1 id="方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版"><a href="#方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版" class="headerlink" title="方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版"></a>方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版</h1><p><a href="https://www.netsarang.com/zh/free-for-home-school/">https://www.netsarang.com/zh/free-for-home-school/</a><br><img src="https://img-blog.csdnimg.cn/2021051911143257.png"></p>
+<p>XShell用来输入指令</p>
+<p>XFtp方便文件管理和传输</p>
+<p>当连接完成之后，就可以把使用GPU的网络训练代码放在服务器上跑了。。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>000. Hello World - 用Github pages和Hexo搭建自己的个人主页</title>
+    <url>/2022/02/24/000-hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</title>
+    <url>/2022/02/24/002-config-pytorch/</url>
+    <content><![CDATA[<p>最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。<br>前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。</p>
+<h1 id="1-安装python3-9"><a href="#1-安装python3-9" class="headerlink" title="1.安装python3.9"></a>1.安装python3.9</h1><p>首先是python的安装，选用当前时间最新版的python3.9.1<br>官网下载安装包即可<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br><img src="https://img-blog.csdnimg.cn/20201219134620158.png"></p>
+<p>一路“下一步”，建议安装到默认路径。</p>
+<p>然后，配置环境变量：<br>找到安装的位置，把图中所示的两个路径加入环境变量。<br>我的路径是：<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python39<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python39\Scripts<br><img src="https://img-blog.csdnimg.cn/20201219134237283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>补充一点：<br>conda里python中的pytorch比较老，遇到没法调用的问题（这里没有深究），所以没有用anaconda，而是直接官网找最新的python。</p>
+<h1 id="2-安装cuda（需要vs环境，我的是vs2015）"><a href="#2-安装cuda（需要vs环境，我的是vs2015）" class="headerlink" title="2.安装cuda（需要vs环境，我的是vs2015）"></a>2.安装cuda（需要vs环境，我的是vs2015）</h1><p>CUDA（Compute Unified Device Architecture），是显卡厂商NVIDIA推出的运算平台。</p>
+<p>我当前的环境是vs2015，电脑配置是</p>
+<p><img src="https://img-blog.csdnimg.cn/20201219142426303.png"><br><img src="https://img-blog.csdnimg.cn/20201219142440290.png"><br>注意CUDA的版本不能超过GPU的版本。</p>
+<p>官网的CUDA安装路径如下：<br><a href="https://developer.nvidia.com/zh-cn/cuda-downloads">https://developer.nvidia.com/zh-cn/cuda-downloads</a><br><img src="https://img-blog.csdnimg.cn/20201219142239715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>圈出来的部分，前者是一个比较大的安装包，下载到本地安装，后者是很小的安装包，但是需要联网，我选的前者。<br><img src="https://img-blog.csdnimg.cn/20201219142349445.png"></p>
+<p>仍然选择当前最新的版本11.1，安装到默认路径下：<br>C:\Program Files\NVIDIA GPU Computing Toolkit</p>
+<h1 id="3-安装cudnn（版本和cuda对应，更老的版本也可以但不建议）"><a href="#3-安装cudnn（版本和cuda对应，更老的版本也可以但不建议）" class="headerlink" title="3.安装cudnn（版本和cuda对应，更老的版本也可以但不建议）"></a>3.安装cudnn（版本和cuda对应，更老的版本也可以但不建议）</h1><p>NVIDIA cuDNN是用于深度神经网络的GPU加速库。<br>老规矩，走官网。<br><a href="https://developer.nvidia.com/rdp/cudnn-archive">https://developer.nvidia.com/rdp/cudnn-archive</a><br><img src="https://img-blog.csdnimg.cn/20201219140906756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
+<p>这里的下载需要注册，有个技巧是复制链接，在迅雷打开可以直接下载。<br><img src="https://img-blog.csdnimg.cn/20201219135916291.png"></p>
+<p>下载好的压缩包解压之后，会发现三个文件夹。<br>分别把文件放到cuda路径对应的文件夹下。<br><img src="https://img-blog.csdnimg.cn/20201219135443329.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
+<h1 id="4-安装pytorch"><a href="#4-安装pytorch" class="headerlink" title="4.安装pytorch"></a>4.安装pytorch</h1><p>它是一个基于Python的可续计算包，提供两个高级功能：1、具有强大的GPU加速的张量计算（如NumPy）。2、包含自动求导系统的深度神经网络。<br>官网：<br><a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a><br><img src="https://img-blog.csdnimg.cn/20201219140414305.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>可以通过pip安装，最下面的命令行在cmd中打开即可。<br>由于速度慢，所以直接从别人那里拷贝过来了。</p>
+<p>可以在python中通过下面的代码来检验，True表示pytorch的cuda配置成功<br><img src="https://img-blog.csdnimg.cn/20201219142901202.png"></p>
+<h1 id="5-安装opencv"><a href="#5-安装opencv" class="headerlink" title="5.安装opencv"></a>5.安装opencv</h1><p>方法一：<br>打开cmd，输入<code>pip install opencv-python</code>即可，但超级慢还可能断开连接。<br>此处建议清华镜像下载</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
+
+<p>方法二：<br>下载相应Python版本的OpenCV的whl文件<br><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv">https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv</a><br>然后打开cmd，在whl文件对应文件夹路径下，使用pip安装，如<br><img src="https://img-blog.csdnimg.cn/20201219141255475.png"></p>
+<h2 id="至此我需要的环境已经配置完成。"><a href="#至此我需要的环境已经配置完成。" class="headerlink" title="至此我需要的环境已经配置完成。"></a>至此我需要的环境已经配置完成。</h2>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+</search>
