@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-24T15:43:00.258Z</updated>
+  <updated>2022-02-25T05:26:17.716Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,17 +21,10 @@
     <link href="http://example.com/2022/02/24/002-config-pytorch/"/>
     <id>http://example.com/2022/02/24/002-config-pytorch/</id>
     <published>2022-02-24T10:54:57.000Z</published>
-    <updated>2022-02-24T15:43:00.258Z</updated>
+    <updated>2022-02-25T05:26:17.716Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。&lt;br&gt;前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。&lt;/p&gt;
-&lt;h1 id=&quot;1-安装python3-9&quot;&gt;&lt;a href=&quot;#1-安装python3-9&quot;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。&lt;br&gt;前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。&lt;/p&gt;</summary>
     
     
     
@@ -47,19 +40,13 @@
     <link href="http://example.com/2022/02/24/001-link-to-server/"/>
     <id>http://example.com/2022/02/24/001-link-to-server/</id>
     <published>2022-02-24T10:48:44.000Z</published>
-    <updated>2022-02-24T15:42:58.623Z</updated>
+    <updated>2022-02-25T05:26:09.837Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;我在用电脑训练CNN时遇到了性能瓶颈（显存不够），当得知实验室的服务器算力更强时，去请教师兄怎么连。&lt;/p&gt;
 &lt;p&gt;实验室的师兄甩过来服务器的ip和用户名密码，说直接连就行。&lt;/p&gt;
-&lt;p&gt;直接连？linux都不会用的小白，咋连？&lt;/p&gt;
-&lt;p&gt;首先确保连接到实验室的网络，</summary>
-        
-      
+&lt;p&gt;直接连？linux都不太会用的小白，咋连？&lt;/p&gt;
+&lt;p&gt;首先确保连接到实验室的网络，我这边是用校园网或者挂校园网的VPN，然后有下面几种配置方法（方法应该很多，只是列出了我尝试过的这三种）：&lt;/p&gt;</summary>
     
     
     
@@ -75,16 +62,10 @@
     <link href="http://example.com/2022/02/24/000-hello-world/"/>
     <id>http://example.com/2022/02/24/000-hello-world/</id>
     <published>2022-02-24T02:54:57.000Z</published>
-    <updated>2022-02-25T02:43:18.722Z</updated>
+    <updated>2022-02-25T05:25:04.459Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Hello world&lt;/strong&gt;&lt;br&gt;欢迎来到我的博客，我是Kennan，一名计算机专业的研究生。以前在不同的地方写一些文章博客，但会受到平台的各种限制和广告。&lt;br&gt;这里在前辈的指导下，通过 &lt;a href=&quot;https://docs.github.com/en/pages&quot;&gt;github pages平台&lt;/a&gt; 和 &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo博客框架&lt;/a&gt; 搭建了一个自己的个人主页，在上面分享一些自己的经历和学习心得。&lt;br&gt;下面记录一下我的搭建过程，请多多指教，一些相关文件可参考我的 &lt;a href=&quot;https://github.com/KennanYang/KennanYang.github.io&quot;&gt;KennanYang.github.io&lt;/a&gt; 项目&lt;/p&gt;</summary>
     
     
     
