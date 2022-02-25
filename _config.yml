@@ -1,0 +1,43 @@
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: hexo-theme-ayer
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repo: https://github.com/KennanYang/KennanYang.github.io.git
+  branch: gh-pages
+
+# Site
+title: KennanYang
+subtitle: Welcome
+description:
+author: Kennan Yang
+email: yzw1048125026@163.com
+keywords: "生活，旅行，思考，代码，博客"
+language: en
+timezone: Asia/Shanghai
+
+
+# hexo-generator-searchdb 搜索
+search:
+  path: search.xml
+  field: post
+  format: html
+  
+# 生成RSS订阅
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:

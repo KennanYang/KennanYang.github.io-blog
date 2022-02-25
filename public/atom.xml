@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>KennanYang</title>
+  <icon>http://example.com/icon.png</icon>
+  <subtitle>Welcome</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-02-24T15:43:00.258Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Kennan Yang</name>
+    <email>yzw1048125026@163.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</title>
+    <link href="http://example.com/2022/02/24/002-config-pytorch/"/>
+    <id>http://example.com/2022/02/24/002-config-pytorch/</id>
+    <published>2022-02-24T10:54:57.000Z</published>
+    <updated>2022-02-24T15:43:00.258Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。&lt;br&gt;前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。&lt;/p&gt;
+&lt;h1 id=&quot;1-安装python3-9&quot;&gt;&lt;a href=&quot;#1-安装python3-9&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>001. 如何连接实验室的服务器进行网络训练？</title>
+    <link href="http://example.com/2022/02/24/001-link-to-server/"/>
+    <id>http://example.com/2022/02/24/001-link-to-server/</id>
+    <published>2022-02-24T10:48:44.000Z</published>
+    <updated>2022-02-24T15:42:58.623Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我在用电脑训练CNN时遇到了性能瓶颈（显存不够），当得知实验室的服务器算力更强时，去请教师兄怎么连。&lt;/p&gt;
+&lt;p&gt;实验室的师兄甩过来服务器的ip和用户名密码，说直接连就行。&lt;/p&gt;
+&lt;p&gt;直接连？linux都不会用的小白，咋连？&lt;/p&gt;
+&lt;p&gt;首先确保连接到实验室的网络，</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>000. Hello World - 用Github pages和Hexo搭建自己的个人主页</title>
+    <link href="http://example.com/2022/02/24/000-hello-world/"/>
+    <id>http://example.com/2022/02/24/000-hello-world/</id>
+    <published>2022-02-24T02:54:57.000Z</published>
+    <updated>2022-02-25T02:43:18.722Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+</feed>
