@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录 |  KennanYang</title>
+      <title>003. go入门，学习用goroutine开启并发 |  KennanYang</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/kennan2.png" />
@@ -60,7 +60,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-002-config-pytorch"
+  id="post-003-goroutine"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -71,7 +71,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录
+  003. go入门，学习用goroutine开启并发
 </h1>
  
 
@@ -79,11 +79,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/02/24/002-config-pytorch/" class="article-date">
-  <time datetime="2022-02-24T10:54:57.000Z" itemprop="datePublished">2022-02-24</time>
+      <a href="/2022/03/02/003-goroutine/" class="article-date">
+  <time datetime="2022-03-02T00:03:04.000Z" itemprop="datePublished">2022-03-02</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
+    <a class="article-category-link" href="/categories/go/">go</a>
   </div>
   
 <div class="word_count">
@@ -91,7 +91,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">707</span>
+            <span class="post-count">598</span>
         </span>
     </span>
 
@@ -107,34 +107,15 @@
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。<br>前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。</p>
-<span id="more"></span>
-<h1 id="1-安装python3-9"><a href="#1-安装python3-9" class="headerlink" title="1.安装python3.9"></a>1.安装python3.9</h1><p>首先是python的安装，选用当前时间最新版的python3.9.1<br>官网下载安装包即可<a target="_blank" rel="noopener" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br><img src="https://img-blog.csdnimg.cn/20201219134620158.png"></p>
-<p>一路“下一步”，建议安装到默认路径。</p>
-<p>然后，配置环境变量：<br>找到安装的位置，把图中所示的两个路径加入环境变量。<br>我的路径是：<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python39<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python39\Scripts<br><img src="https://img-blog.csdnimg.cn/20201219134237283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>补充一点：<br>conda里python中的pytorch比较老，遇到没法调用的问题（这里没有深究），所以没有用anaconda，而是直接官网找最新的python。</p>
-<h1 id="2-安装cuda（需要vs环境，我的是vs2015）"><a href="#2-安装cuda（需要vs环境，我的是vs2015）" class="headerlink" title="2.安装cuda（需要vs环境，我的是vs2015）"></a>2.安装cuda（需要vs环境，我的是vs2015）</h1><p>CUDA（Compute Unified Device Architecture），是显卡厂商NVIDIA推出的运算平台。</p>
-<p>我当前的环境是vs2015，电脑配置是</p>
-<p><img src="https://img-blog.csdnimg.cn/20201219142426303.png"><br><img src="https://img-blog.csdnimg.cn/20201219142440290.png"><br>注意CUDA的版本不能超过GPU的版本。</p>
-<p>官网的CUDA安装路径如下：<br><a target="_blank" rel="noopener" href="https://developer.nvidia.com/zh-cn/cuda-downloads">https://developer.nvidia.com/zh-cn/cuda-downloads</a><br><img src="https://img-blog.csdnimg.cn/20201219142239715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>圈出来的部分，前者是一个比较大的安装包，下载到本地安装，后者是很小的安装包，但是需要联网，我选的前者。<br><img src="https://img-blog.csdnimg.cn/20201219142349445.png"></p>
-<p>仍然选择当前最新的版本11.1，安装到默认路径下：<br>C:\Program Files\NVIDIA GPU Computing Toolkit</p>
-<h1 id="3-安装cudnn（版本和cuda对应，更老的版本也可以但不建议）"><a href="#3-安装cudnn（版本和cuda对应，更老的版本也可以但不建议）" class="headerlink" title="3.安装cudnn（版本和cuda对应，更老的版本也可以但不建议）"></a>3.安装cudnn（版本和cuda对应，更老的版本也可以但不建议）</h1><p>NVIDIA cuDNN是用于深度神经网络的GPU加速库。<br>老规矩，走官网。<br><a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">https://developer.nvidia.com/rdp/cudnn-archive</a><br><img src="https://img-blog.csdnimg.cn/20201219140906756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
-<p>这里的下载需要注册，有个技巧是复制链接，在迅雷打开可以直接下载。<br><img src="https://img-blog.csdnimg.cn/20201219135916291.png"></p>
-<p>下载好的压缩包解压之后，会发现三个文件夹。<br>分别把文件放到cuda路径对应的文件夹下。<br><img src="https://img-blog.csdnimg.cn/20201219135443329.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
-<h1 id="4-安装pytorch"><a href="#4-安装pytorch" class="headerlink" title="4.安装pytorch"></a>4.安装pytorch</h1><p>它是一个基于Python的可续计算包，提供两个高级功能：1、具有强大的GPU加速的张量计算（如NumPy）。2、包含自动求导系统的深度神经网络。<br>官网：<br><a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a><br><img src="https://img-blog.csdnimg.cn/20201219140414305.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>可以通过pip安装，最下面的命令行在cmd中打开即可。<br>由于速度慢，所以直接从别人那里拷贝过来了。</p>
-<p>可以在python中通过下面的代码来检验，True表示pytorch的cuda配置成功<br><img src="https://img-blog.csdnimg.cn/20201219142901202.png"></p>
-<h1 id="5-安装opencv"><a href="#5-安装opencv" class="headerlink" title="5.安装opencv"></a>5.安装opencv</h1><p>方法一：<br>打开cmd，输入<code>pip install opencv-python</code>即可，但超级慢还可能断开连接。<br>此处建议清华镜像下载</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
-
-<p>方法二：<br>下载相应Python版本的OpenCV的whl文件<br><a target="_blank" rel="noopener" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv">https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv</a><br>然后打开cmd，在whl文件对应文件夹路径下，使用pip安装，如<br><img src="https://img-blog.csdnimg.cn/20201219141255475.png"></p>
-<h2 id="至此我需要的环境已经配置完成。"><a href="#至此我需要的环境已经配置完成。" class="headerlink" title="至此我需要的环境已经配置完成。"></a>至此我需要的环境已经配置完成。</h2> 
+  <p><strong>为了学习go语言，和了解并行的基本写法，这里通过一个demo练习</strong><br>由于已经有了c++和python的基础，所以了解基本语法很快，主要是学习go面向消息的传递机制，以及使用goroutine进行并发操作。<br>参考资料：<br><a target="_blank" rel="noopener" href="https://www.runoob.com/go/go-concurrent.html">Go 语言教程-Go并发</a></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*一个go的并行计算demo,学习go的基本语法，并计算两个数组元素值为1的数目*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//包声明：必须在源文件中非注释的第一行指明这个文件属于哪个包</span></span><br><span class="line"><span class="comment">//每个Go程序都包含一个名为main的包</span></span><br><span class="line"><span class="keyword">package</span> main </span><br><span class="line"></span><br><span class="line"><span class="comment">//import告诉Go编译器使用&quot;fmt&quot;包里的元素</span></span><br><span class="line"><span class="comment">//fmt包实现了格式化IO函数</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">函数声明方式</span></span><br><span class="line"><span class="comment">func function_name([parameter list])[return_types]&#123;</span></span><br><span class="line"><span class="comment">    函数体</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sum</span><span class="params">(arr []<span class="type">int</span>, c <span class="keyword">chan</span> <span class="type">int</span>)</span></span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    变量声明的两种方式：</span></span><br><span class="line"><span class="comment">    1.var v_name v_type = value</span></span><br><span class="line"><span class="comment">    2.v_name := value 根据值自行判定变量类型</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    注：标识符首字母大写，如Group 1，则可被外部包调用，称为导出。以小写字母开头则只能内部可见。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    sum := <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    循环定义方式 </span></span><br><span class="line"><span class="comment">    1.for init; condition； post&#123;&#125;</span></span><br><span class="line"><span class="comment">    2.for condition&#123;&#125;</span></span><br><span class="line"><span class="comment">    3.for key, value := range iter&#123;&#125;  用range对slice、map、数组等迭代循环</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> _, value := <span class="keyword">range</span> arr &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        条件语句</span></span><br><span class="line"><span class="comment">        if 布尔表达式&#123;</span></span><br><span class="line"><span class="comment">            //语句</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">if</span> value == <span class="number">1</span>&#123;</span><br><span class="line">            <span class="comment">//运算符同c++，包括++，--</span></span><br><span class="line">            sum++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//值保存到通道（channel）方便并行</span></span><br><span class="line">    c &lt;- sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//main函数是程序开始执行的函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">( )</span></span>&#123;</span><br><span class="line">    <span class="comment">//字符串输出到控制台，并结尾增加换行符&#x27;\n&#x27;</span></span><br><span class="line">    fmt.Println(<span class="string">&quot;hello world!&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建数组方式一: var variable_name = [SIZE] variable_type&#123;,,,...&#125;</span></span><br><span class="line">    <span class="keyword">var</span> arr_a =[]<span class="type">int</span>  &#123;<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">5</span>&#125;</span><br><span class="line">    <span class="comment">// 创建数组方式二: variable_name := [SIZE] variable_type&#123;,,,...&#125;</span></span><br><span class="line">    arr_b := []<span class="type">int</span> &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="type">int</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    函数调用方式: func([parameter_list])</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    goroutine: 轻量级线程，支持并发</span></span><br><span class="line"><span class="comment">    如果用goroutine调度，则前加go关键字，如go f(x,y,z)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">go</span> sum(arr_a, ch)</span><br><span class="line">    <span class="keyword">go</span> sum(arr_b, ch)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    通道（channel）可用于两个goroutine之间通过传递一个指定的值来同步运行和通讯。</span></span><br><span class="line"><span class="comment">    操作符&lt;-用于指定通道的方向，发送或接收。如：</span></span><br><span class="line"><span class="comment">    ch &lt;- v //把v发送到通道ch</span></span><br><span class="line"><span class="comment">    v := &lt;- ch //从ch接收数据，并把值赋给v</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    result_a, result_b := &lt;- ch, &lt;- ch</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//输出计算结果</span></span><br><span class="line">    fmt.Println(<span class="string">&quot;results&quot;</span>, result_a, result_b, result_a + result_b)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+ 
       <!-- reward -->
       
     </div>
@@ -186,12 +167,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/02/24/002-config-pytorch/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/03/02/003-goroutine/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B9%B6%E5%8F%91/" rel="tag">并发</a></li></ul>
 
     </footer>
   </div>
@@ -199,19 +180,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/03/02/003-goroutine/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            003. go入门，学习用goroutine开启并发
-          
-        </div>
-      </a>
     
-    
-      <a href="/2022/02/24/001-link-to-server/" class="article-nav-link">
+      <a href="/2022/02/24/002-config-pytorch/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">001. 如何连接实验室的服务器进行网络训练？</div>
+        <div class="article-nav-title">002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</div>
       </a>
     
   </nav>
