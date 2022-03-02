@@ -12,6 +12,9 @@ tags:
 参考资料：
 [Go 语言教程-Go并发](https://www.runoob.com/go/go-concurrent.html)
 
+### 代码
+hello.go
+
 ```go
 /*一个go的并行计算demo,学习go的基本语法，并计算两个数组元素值为1的数目*/
 
@@ -100,3 +103,6 @@ func main( ){
 }
 
 ```
+
+### 输出结果
+![输出结果](/images/helloworld.png)
