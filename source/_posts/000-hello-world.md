@@ -1,8 +1,11 @@
 ---
 title: 000. Hello World - 用Github pages和Hexo搭建自己的个人主页
 date: 2022-02-24 10:54:57
-categories: 技术
-tags: 技术
+categories: 搭建环境
+tags:
+- git
+- 搭建环境
+  
 top: True
 ---
 

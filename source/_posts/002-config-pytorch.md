@@ -1,8 +1,8 @@
 ---
 title: 002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录
 date: 2022-02-24 18:54:57
-categories: 技术
-tags: 技术
+categories: python
+tags: python
 ---
 最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。
 前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。
