@@ -117,6 +117,8 @@
        
   <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><a target="_blank" rel="noopener" href="http://c.biancheng.net/view/3390.html">《c语言学习网》数据结构总结——树</a><br>本文旨在根据教程巩固树的数据结构知识和c语言指针的应用，记录一下自己学习过程中的代码，知识讲解参考教程。</p>
 <h2 id="一、树的基本概念和术语"><a href="#一、树的基本概念和术语" class="headerlink" title="一、树的基本概念和术语"></a>一、树的基本概念和术语</h2><p>树结构是一种非线性存储结构，存储的是具有“一对多”关系的数据元素的集合。如图 是使用树结构存储的集合 {A,B,C,D,E,F,G,H,I,J,K,L,M} 的示意图。对于数据 A 来说，和数据 B、C、D 有关系；对于数据 B 来说，和 E、F 有关系。这就是“一对多”的关系。<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTA0MjcvMDk0NDMwMTQ5My0wLnBuZw?x-oss-process=image/format,png" alt="图 1（A）树的示例"></p>
+<span id="more"></span>
+
 <h3 id="1-树的节点"><a href="#1-树的节点" class="headerlink" title="1.树的节点"></a>1.树的节点</h3><p>结点：使用树结构存储的每一个数据元素都被称为“结点”。例如，图 1（A）中，数据元素 A 就是一个结点；</p>
 <p>父结点（双亲结点）、子结点和兄弟结点：对于图 1（A）中的结点 A、B、C、D 来说，A 是 B、C、D 结点的父结点（也称为“双亲结点”），而 B、C、D 都是 A 结点的子结点（也称“孩子结点”）。对于 B、C、D 来说，它们都有相同的父结点，所以它们互为兄弟结点。</p>
 <p>树根结点（简称“根结点”）：每一个非空树都有且只有一个被称为根的结点。图 1（A）中，结点 A 就是整棵树的根结点。</p>

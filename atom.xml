@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-02T01:20:29.359Z</updated>
+  <updated>2022-03-12T03:31:25.506Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,16 +21,11 @@
     <link href="http://example.com/2022/03/02/004-tree-datatype/"/>
     <id>http://example.com/2022/03/02/004-tree-datatype/</id>
     <published>2022-03-02T00:59:29.000Z</published>
-    <updated>2022-03-02T01:20:29.359Z</updated>
+    <updated>2022-03-12T03:31:25.506Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://c.biancheng.net/view/3390.html&quot;&gt;《c语言学习网》数据结构总结——树&lt;/a&gt;&lt;br&gt;本文旨在根据教程巩固树的数据结构知识和c语言指针的应用，记录一下自己学习过程中的代码，知识讲解参考教程。&lt;/p&gt;
+&lt;h2 id=&quot;一、树的基本概念和术语&quot;&gt;&lt;a href=&quot;#一、树的基本概念和术语&quot; class=&quot;headerlink&quot; title=&quot;一、树的基本概念和术语&quot;&gt;&lt;/a&gt;一、树的基本概念和术语&lt;/h2&gt;&lt;p&gt;树结构是一种非线性存储结构，存储的是具有“一对多”关系的数据元素的集合。如图 是使用树结构存储的集合 {A,B,C,D,E,F,G,H,I,J,K,L,M} 的示意图。对于数据 A 来说，和数据 B、C、D 有关系；对于数据 B 来说，和 E、F 有关系。这就是“一对多”的关系。&lt;br&gt;&lt;img src=&quot;https://imgconvert.csdnimg.cn/aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTA0MjcvMDk0NDMwMTQ5My0wLnBuZw?x-oss-process=image/format,png&quot; alt=&quot;图 1（A）树的示例&quot;&gt;&lt;/p&gt;</summary>
     
     
     
