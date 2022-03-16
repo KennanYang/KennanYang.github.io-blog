@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-12T03:31:25.506Z</updated>
+  <updated>2022-03-16T05:25:55.898Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>005.UDP/TCP协议详解</title>
+    <link href="http://example.com/2022/03/16/005-TCP-IP/"/>
+    <id>http://example.com/2022/03/16/005-TCP-IP/</id>
+    <published>2022-03-16T04:27:49.000Z</published>
+    <updated>2022-03-16T05:25:55.898Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;面试中频繁问到UDP/TCP协议，但是经常只知其表，不知其里，因此在这里做一个总结，尽量涵盖可能问到的问题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计算机网络" scheme="http://example.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>004. 数据结构总结 —— 树</title>
