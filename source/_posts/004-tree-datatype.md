@@ -15,6 +15,8 @@ tags:
 
 树结构是一种非线性存储结构，存储的是具有“一对多”关系的数据元素的集合。如图 是使用树结构存储的集合 {A,B,C,D,E,F,G,H,I,J,K,L,M} 的示意图。对于数据 A 来说，和数据 B、C、D 有关系；对于数据 B 来说，和 E、F 有关系。这就是“一对多”的关系。
 ![图 1（A）树的示例](https://imgconvert.csdnimg.cn/aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTA0MjcvMDk0NDMwMTQ5My0wLnBuZw?x-oss-process=image/format,png)
+<!--more-->
+
 ### 1.树的节点
 结点：使用树结构存储的每一个数据元素都被称为“结点”。例如，图 1（A）中，数据元素 A 就是一个结点；
 
