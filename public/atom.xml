@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-22T00:57:00.268Z</updated>
+  <updated>2022-05-30T03:28:04.804Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,14 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>006-HTTP协议详解</title>
+    <link href="http://example.com/2022/05/30/006-HTTP-HTTPS/"/>
+    <id>http://example.com/2022/05/30/006-HTTP-HTTPS/</id>
+    <published>2022-05-30T02:46:33.000Z</published>
+    <updated>2022-05-30T03:28:04.804Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;超文本传输协议（Hyper Text Transfer Protocol，HTTP）&lt;/strong&gt; 是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。&lt;/p&gt;
+&lt;p&gt;HTTP协议是网络编程的基础知识，后端开发应当熟练掌握，但是相关内容较多，这里做一个总结方便回顾。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计算机网络" scheme="http://example.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>005. UDP/TCP协议详解</title>
     <link href="http://example.com/2022/03/16/005-TCP-IP/"/>
     <id>http://example.com/2022/03/16/005-TCP-IP/</id>
     <published>2022-03-16T04:27:49.000Z</published>
-    <updated>2022-03-22T00:57:00.268Z</updated>
+    <updated>2022-05-09T12:17:20.025Z</updated>
     
     
-    <summary type="html">&lt;p&gt;面试中频繁问到UDP/TCP协议，但是经常只知其表，不知其里，因此在这里做一个总结，尽量涵盖可能问到的问题。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;面试中频繁问到UDP&amp;#x2F;TCP协议，但是经常只知其表，不知其里，因此在这里做一个总结，尽量涵盖可能问到的问题。&lt;/p&gt;</summary>
     
     
     
@@ -40,7 +60,7 @@
     <link href="http://example.com/2022/03/02/004-tree-datatype/"/>
     <id>http://example.com/2022/03/02/004-tree-datatype/</id>
     <published>2022-03-02T00:59:29.000Z</published>
-    <updated>2022-03-12T03:31:25.506Z</updated>
+    <updated>2022-05-09T12:17:20.024Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://c.biancheng.net/view/3390.html&quot;&gt;《c语言学习网》数据结构总结——树&lt;/a&gt;&lt;br&gt;本文旨在根据教程巩固树的数据结构知识和c语言指针的应用，记录一下自己学习过程中的代码，知识讲解参考教程。&lt;/p&gt;
@@ -62,7 +82,7 @@
     <link href="http://example.com/2022/03/02/003-goroutine/"/>
     <id>http://example.com/2022/03/02/003-goroutine/</id>
     <published>2022-03-02T00:03:04.000Z</published>
-    <updated>2022-03-02T01:36:32.000Z</updated>
+    <updated>2022-05-09T12:17:20.024Z</updated>
     
     
       
@@ -89,7 +109,7 @@
     <link href="http://example.com/2022/02/24/002-config-pytorch/"/>
     <id>http://example.com/2022/02/24/002-config-pytorch/</id>
     <published>2022-02-24T10:54:57.000Z</published>
-    <updated>2022-03-02T00:05:07.546Z</updated>
+    <updated>2022-05-09T12:17:20.024Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。&lt;br&gt;前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。&lt;/p&gt;</summary>
@@ -108,7 +128,7 @@
     <link href="http://example.com/2022/02/24/001-link-to-server/"/>
     <id>http://example.com/2022/02/24/001-link-to-server/</id>
     <published>2022-02-24T10:48:44.000Z</published>
-    <updated>2022-03-02T00:48:25.378Z</updated>
+    <updated>2022-05-09T12:17:20.023Z</updated>
     
     
     <summary type="html">&lt;p&gt;我在用电脑训练CNN时遇到了性能瓶颈（显存不够），当得知实验室的服务器算力更强时，去请教师兄怎么连。&lt;/p&gt;
@@ -132,7 +152,7 @@
     <link href="http://example.com/2022/02/24/000-hello-world/"/>
     <id>http://example.com/2022/02/24/000-hello-world/</id>
     <published>2022-02-24T02:54:57.000Z</published>
-    <updated>2022-03-02T00:47:54.603Z</updated>
+    <updated>2022-05-09T12:17:20.023Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;Hello world&lt;/strong&gt;&lt;br&gt;欢迎来到我的博客，我是Kennan，一名计算机专业的研究生。以前在不同的地方写一些文章博客，但会受到平台的各种限制和广告。&lt;br&gt;这里在前辈的指导下，通过 &lt;a href=&quot;https://docs.github.com/en/pages&quot;&gt;github pages平台&lt;/a&gt; 和 &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo博客框架&lt;/a&gt; 搭建了一个自己的个人主页，在上面分享一些自己的经历和学习心得。&lt;br&gt;下面记录一下我的搭建过程，请多多指教，一些相关文件可参考我的 &lt;a href=&quot;https://github.com/KennanYang/KennanYang.github.io&quot;&gt;KennanYang.github.io&lt;/a&gt; 项目&lt;/p&gt;</summary>
