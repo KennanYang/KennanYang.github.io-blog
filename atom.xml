@@ -39,10 +39,10 @@
   
   <entry>
     <title>009. 机器学习：车辆分割任务和卷积神经网络课堂实践</title>
-    <link href="http://example.com/2022/06/15/009-FCN-car-recognition/"/>
-    <id>http://example.com/2022/06/15/009-FCN-car-recognition/</id>
-    <published>2022-06-15T01:44:24.000Z</published>
-    <updated>2022-06-15T04:50:49.009Z</updated>
+    <link href="http://example.com/2022/06/13/009-FCN-car-recognition/"/>
+    <id>http://example.com/2022/06/13/009-FCN-car-recognition/</id>
+    <published>2022-06-13T01:44:24.000Z</published>
+    <updated>2022-06-15T05:38:07.610Z</updated>
     
     
     <summary type="html">&lt;p&gt;这是在学习《机器学习基础》课程的&lt;strong&gt;神经网络&lt;/strong&gt;这一章时，做的期末大作业，详见《机器学习（周立华）》第五章，记录一下以便回顾。&lt;/p&gt;
@@ -63,10 +63,10 @@
   
   <entry>
     <title>008. 机器学习：聚类任务和k_means算法课堂实践</title>
-    <link href="http://example.com/2022/06/15/008-k-means/"/>
-    <id>http://example.com/2022/06/15/008-k-means/</id>
-    <published>2022-06-15T01:43:51.000Z</published>
-    <updated>2022-06-15T05:19:14.356Z</updated>
+    <link href="http://example.com/2022/06/08/008-k-means/"/>
+    <id>http://example.com/2022/06/08/008-k-means/</id>
+    <published>2022-06-08T01:43:51.000Z</published>
+    <updated>2022-06-15T05:39:03.210Z</updated>
     
     
     <summary type="html">&lt;p&gt;这是在学习《机器学习基础》课程的&lt;strong&gt;聚类&lt;/strong&gt;这一章时，做的课堂实践内容，详见《机器学习（周立华）》第九章，记录一下以便回顾。&lt;br&gt;数据集使用 &lt;a href=&quot;http://www.cs.toronto.edu/~kriz/cifar.html&quot;&gt;CIFAR-10数据集&lt;/a&gt;&lt;br&gt;完整代码见github：&lt;a href=&quot;https://github.com/KennanYang/mechine-learning/blob/master/week11_k_means.ipynb&quot;&gt;聚类和k均值算法课程实践&lt;/a&gt;&lt;/p&gt;</summary>
@@ -84,10 +84,10 @@
   
   <entry>
     <title>007. 机器学习：支持向量机（SVM）课堂实践</title>
-    <link href="http://example.com/2022/06/15/007-SVM/"/>
-    <id>http://example.com/2022/06/15/007-SVM/</id>
-    <published>2022-06-15T01:43:37.000Z</published>
-    <updated>2022-06-15T04:50:29.108Z</updated>
+    <link href="http://example.com/2022/06/04/007-SVM/"/>
+    <id>http://example.com/2022/06/04/007-SVM/</id>
+    <published>2022-06-04T01:43:37.000Z</published>
+    <updated>2022-06-15T05:38:40.366Z</updated>
     
     
     <summary type="html">&lt;p&gt;这是在学习《机器学习基础》课程的支持向量机这一章时，做的课堂实践内容，详见《机器学习（周立华）》第六章，记录一下以便回顾。&lt;br&gt;数据集使用 &lt;a href=&quot;http://yann.lecun.com/exdb/mnist/&quot;&gt;Mnist-image数据集&lt;/a&gt;&lt;br&gt;完整代码见github：&lt;a href=&quot;https://github.com/KennanYang/mechine-learning/blob/master/week7_SVM.ipynb&quot;&gt;SVM课程实践&lt;/a&gt;&lt;/p&gt;</summary>
@@ -105,10 +105,10 @@
   
   <entry>
     <title>006. HTTP协议详解</title>
-    <link href="http://example.com/2022/05/30/006-HTTP-HTTPS/"/>
-    <id>http://example.com/2022/05/30/006-HTTP-HTTPS/</id>
-    <published>2022-05-30T02:46:33.000Z</published>
-    <updated>2022-06-15T01:41:12.500Z</updated>
+    <link href="http://example.com/2022/04/30/006-HTTP-HTTPS/"/>
+    <id>http://example.com/2022/04/30/006-HTTP-HTTPS/</id>
+    <published>2022-04-30T02:46:33.000Z</published>
+    <updated>2022-06-15T05:39:41.700Z</updated>
     
     
     <summary type="html">&lt;p&gt;HTTP协议是网络编程的基础知识，后端开发应当熟练掌握，但是相关内容较多。&lt;/p&gt;
@@ -145,10 +145,10 @@
   
   <entry>
     <title>004. 数据结构总结 —— 树</title>
-    <link href="http://example.com/2022/03/02/004-tree-datatype/"/>
-    <id>http://example.com/2022/03/02/004-tree-datatype/</id>
-    <published>2022-03-02T00:59:29.000Z</published>
-    <updated>2022-03-12T03:31:25.506Z</updated>
+    <link href="http://example.com/2022/03/12/004-tree-datatype/"/>
+    <id>http://example.com/2022/03/12/004-tree-datatype/</id>
+    <published>2022-03-12T00:59:29.000Z</published>
+    <updated>2022-06-15T05:38:42.422Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://c.biancheng.net/view/3390.html&quot;&gt;《c语言学习网》数据结构总结——树&lt;/a&gt;&lt;br&gt;本文旨在根据教程巩固树的数据结构知识和c语言指针的应用，记录一下自己学习过程中的代码，知识讲解参考教程。&lt;/p&gt;
@@ -194,10 +194,10 @@
   
   <entry>
     <title>002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</title>
-    <link href="http://example.com/2022/02/24/002-config-pytorch/"/>
-    <id>http://example.com/2022/02/24/002-config-pytorch/</id>
-    <published>2022-02-24T10:54:57.000Z</published>
-    <updated>2022-03-02T00:05:07.546Z</updated>
+    <link href="http://example.com/2022/02/26/002-config-pytorch/"/>
+    <id>http://example.com/2022/02/26/002-config-pytorch/</id>
+    <published>2022-02-26T10:54:57.000Z</published>
+    <updated>2022-06-15T05:38:56.426Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。&lt;br&gt;前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。&lt;br&gt;</summary>

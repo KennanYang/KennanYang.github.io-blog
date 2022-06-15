@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>006. HTTP协议详解 |  KennanYang</title>
+      <title>007. 机器学习：支持向量机（SVM）课堂实践 |  KennanYang</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/kennan2.png" />
@@ -60,7 +60,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-006-HTTP-HTTPS"
+  id="post-007-SVM"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -71,7 +71,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  006. HTTP协议详解
+  007. 机器学习：支持向量机（SVM）课堂实践
 </h1>
  
 
@@ -79,11 +79,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/05/30/006-HTTP-HTTPS/" class="article-date">
-  <time datetime="2022-05-30T02:46:33.000Z" itemprop="datePublished">2022-05-30</time>
+      <a href="/2022/06/04/007-SVM/" class="article-date">
+  <time datetime="2022-06-04T01:43:37.000Z" itemprop="datePublished">2022-06-04</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+    <a class="article-category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
   </div>
   
 <div class="word_count">
@@ -91,7 +91,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.4k</span>
+            <span class="post-count">623</span>
         </span>
     </span>
 
@@ -100,7 +100,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">8 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
@@ -115,154 +115,19 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>HTTP协议是网络编程的基础知识，后端开发应当熟练掌握，但是相关内容较多。</p>
-<p>之前在学校学的都忘记了，最近为了找工作又复习起来，参考了力扣上的教程和一些网上资料，做一个总结，并补充一些常问的八股方便回顾。</p>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/leetbook/read/tech-interview-cookbook/o9ga26/">校招基础知识详解-HTTP</a></p>
+  <p>这是在学习《机器学习基础》课程的支持向量机这一章时，做的课堂实践内容，详见《机器学习（周立华）》第六章，记录一下以便回顾。<br>数据集使用 <a target="_blank" rel="noopener" href="http://yann.lecun.com/exdb/mnist/">Mnist-image数据集</a><br>完整代码见github：<a target="_blank" rel="noopener" href="https://github.com/KennanYang/mechine-learning/blob/master/week7_SVM.ipynb">SVM课程实践</a></p>
 <span id="more"></span>
-<h2 id="URL解析过程"><a href="#URL解析过程" class="headerlink" title="URL解析过程"></a>URL解析过程</h2><p>当输入网址时会发生什么呢？提到HTTP就不能不先了解一下URL的解析过程。</p>
-<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>在WWW上，每一信息资源都有统一的且在网上唯一的地址，该地址就叫<strong>URL（Uniform Resource Locator,统一资源定位器）</strong>，它是WWW的统一资源定位标志，就是指网络地址。</p>
-<h3 id="浏览器输入地址后发生什么？"><a href="#浏览器输入地址后发生什么？" class="headerlink" title="浏览器输入地址后发生什么？"></a>浏览器输入地址后发生什么？</h3><p>1、域名解析： 浏览器获得URL地址，向操作系统请求该URL对应的IP地址，操作系统查询DNS（首先查询本地HOST文件，没有则查询网络）获得对应的IP地址</p>
-<p>解释：</p>
-<p>把URL分割成几个部分：协议、网络地址、资源路径</p>
-<p>协议：指从该计算机获取资源的方式，常见的是HTTP、FTP</p>
-<p>网络地址：可以是域名或者是IP地址，也可以包括端口号，如果不注明端口号，默认是80端口</p>
-<p>如果地址不是一个IP地址，则需要通过DNS（域名系统）将该地址解析成IP地址，IP地址对应着网络上的一台计算机，DNS服务器本身也有IP，你的网络设置包含DNS服务器的IP，例如，www.abc.com不是一个IP，则需要向DNS询问请求www.abc.com对应的IP，获得IP，在这个过程中，你的电脑直接询问DNS服务器可能没有发现www.abc.com对应的IP，就会向它的上级服务器询问，这样依次一层层向上级找，最高可达根节点，直到找到或者全部找不到为止</p>
-<p>端口号就相当于银行的窗口，不同的窗口负责不同的服务，如果输入www.abc.com:8080/，则表示不使用默认的80端口，而使用指定的8080端口</p>
-<p>2、确认好了IP和端口号，则可以向该IP地址对应的服务器的该端口号发起TCP连接请求</p>
-<p>3、服务器接收到TCP连接请求后，回复可以连接请求，</p>
-<p>4、浏览器收到回传的数据后，还会向服务器发送数据包，表示三次握手结束</p>
-<p>5、三次握手成功后，开始通讯，根据HTTP协议的要求，组织一个请求的数据包，里面包含请求的资源路径、你的身份信息等。</p>
-<p>例如，www.abc.com/images/1/表示的资源路径是images/1/，发送后，服务器响应请求，将数据返回给浏览器，数据可以是根据HTML协议组织的网页，里面包含页面的布局、文字等等，也可以是图片或者脚本程序等，如果资源路径指定的资源不存在，服务器就会返回404错误，如果返回的是一个页面，则根据页面里的一些外链URL地址，重复上述步骤，再次获取</p>
-<p>6、渲染页面，并开始响应用户的操作</p>
-<p>7、窗口关闭时，浏览器终止与服务器的连接</p>
-<h2 id="HTTP基础"><a href="#HTTP基础" class="headerlink" title="HTTP基础"></a>HTTP基础</h2><p><strong>超文本传输协议（Hyper Text Transfer Protocol，HTTP）</strong> 是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。</p>
-<p>关于HTTP1.1协议的具体内容可以参考<a target="_blank" rel="noopener" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.2.2">RFC 2616</a>。 </p>
-<h3 id="1-报文格式"><a href="#1-报文格式" class="headerlink" title="1. 报文格式"></a>1. 报文格式</h3><p>客户端发送一个请求报文给服务器，服务器根据请求报文中的信息进行处理，并将处理结果放入响应报文中返回给客户端。</p>
-<p>如下图所示方式可打开HTTP报文查看内容。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/x1037490413/article/details/117704060">http协议以及如何在谷歌控制台查看通信报文</a></p>
-<p>上方为请求报文解析内容，下方为响应报文内容。</p>
-<p><img src="https://pic.imgdb.cn/item/629440300947543129839d01.png" alt="图1. 一个HTTP报文"></p>
-<p><strong>1.1 请求报文格式如下：</strong></p>
-<ul>
-<li>第一行是包含了请求方法、URL、协议版本；</li>
-<li>接下来的多行都是请求首部 Header，每个首部都有一个首部名称，以及对应的值。</li>
-<li>一个空行用来分隔首部和内容主体 Body</li>
-<li>最后是请求的内容主体</li>
-</ul>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">http://www.example.com/</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Accept</span><span class="punctuation">: </span>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</span><br><span class="line"><span class="attribute">Accept-Encoding</span><span class="punctuation">: </span>gzip, deflate</span><br><span class="line"><span class="attribute">Accept-Language</span><span class="punctuation">: </span>zh-CN,zh;q=0.9,en;q=0.8</span><br><span class="line"><span class="attribute">Cache-Control</span><span class="punctuation">: </span>max-age=0</span><br><span class="line"></span><br><span class="line"><span class="language-awk">作者：CyC2018</span></span><br><span class="line"><span class="language-awk">链接：https:<span class="regexp">//</span>leetcode.cn<span class="regexp">/leetbook/</span>read<span class="regexp">/tech-interview-cookbook/</span>orse6h/</span></span><br><span class="line"><span class="language-awk">来源：力扣（LeetCode）</span></span><br></pre></td></tr></table></figure>
-<p><strong>1.2 应答报文格式如下：</strong></p>
-<ul>
-<li>第一行包含协议版本、状态码以及描述，最常见的是 200 OK 表示请求成功了，如图1</li>
-<li>接下来多行也是首部内容</li>
-<li>一个空行分隔首部和内容主体</li>
-<li>最后是响应的内容主体</li>
-</ul>
-<h3 id="2-HTTP-方法"><a href="#2-HTTP-方法" class="headerlink" title="2. HTTP 方法"></a>2. HTTP 方法</h3><p><strong>GET</strong></p>
-<p>获取资源</p>
-<p><strong>HEAD</strong></p>
-<p>获取报文首部，和 GET 方法类似，但是不返回报文实体主体部分。</p>
-<p>主要用于确认 URL 的有效性以及资源更新的日期时间等。</p>
-<p><strong>POST</strong></p>
-<p>传输实体主体</p>
-<p>POST 主要用来传输数据，而 GET 主要用来获取资源。</p>
-<font color = #888888>
-
-*GET和POST的区别？*
-1)    后退按钮或刷新，Get无害，post数据会被重新提交；
-2)    Get所使用的URL可以被设置为书签，而post不可以；
-3)    Get能够被缓存，而post不可以；
-4)    Get参数保留在浏览器历史中，而post参数不会保留在浏览器历史中；
-5)    当发生数据时，get方法向URL添加数据，URL的数据长度是受限的，而post没有数据长度限制；
-6)    Get只允许ASCII编码，而post没有限制；
-7)    Get安全性没有post安全性好；
-8)    Get数据在URL中对所有人是可见的，而在post中数据不会显示在URL中。
-9)    Get产生一个TCP数据包，post产生两个TCP数据包；对于get方式的请求，浏览器会把header和data一并发送出去；对于post，浏览器先发送header再发送data；
-10)    GET和POST本质上就是TCP链接，并无差别。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。
-
-</font>
-
-
-<p><strong>PUT</strong></p>
-<p>上传文件</p>
-<p>由于自身不带验证机制，任何人都可以上传文件，因此存在安全性问题，一般不使用该方法。</p>
-<p><strong>PATCH</strong></p>
-<p>对资源进行部分修改</p>
-<p>PUT 也可以用于修改资源，但是只能完全替代原始资源，PATCH 允许部分修改。</p>
-<p><strong>DELETE</strong></p>
-<p>删除文件</p>
-<p>与 PUT 功能相反，并且同样不带验证机制。</p>
-<p><strong>OPTIONS</strong></p>
-<p>查询支持的方法</p>
-<p>查询指定的 URL 能够支持的方法。</p>
-<p>会返回 Allow: GET, POST, HEAD, OPTIONS 这样的内容。</p>
-<p><strong>CONNECT</strong></p>
-<p>要求在与代理服务器通信时建立隧道</p>
-<p>使用 SSL（Secure Sockets Layer，安全套接层）和 TLS（Transport Layer Security，传输层安全）协议把通信内容加密后经网络隧道传输。</p>
-<p><strong>TRACE</strong></p>
-<p>追踪路径</p>
-<p>服务器会将通信路径返回给客户端。</p>
-<p>发送请求时，在 Max-Forwards 首部字段中填入数值，每经过一个服务器就会减 1，当数值为 0 时就停止传输。</p>
-<p>通常不会使用 TRACE，并且它容易受到 XST 攻击（Cross-Site Tracing，跨站追踪）。</p>
-<h3 id="HTTP-状态码"><a href="#HTTP-状态码" class="headerlink" title="HTTP 状态码"></a>HTTP 状态码</h3><p>服务器返回的 <strong>响应报文</strong> 中第一行为状态行，包含了状态码以及原因短语，用来告知客户端请求的结果。</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">状态码</th>
-<th style="text-align:center">类别</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1XX</td>
-<td style="text-align:center">Informational（信息性状态码）</td>
-<td style="text-align:center">接收的请求正在处理</td>
-</tr>
-<tr>
-<td style="text-align:center">2XX</td>
-<td style="text-align:center">Success（成功状态码）</td>
-<td style="text-align:center">请求正常处理完毕</td>
-</tr>
-<tr>
-<td style="text-align:center">3XX</td>
-<td style="text-align:center">Redirection（重定向状态码）</td>
-<td style="text-align:center">需要进行附加操作以完成请求</td>
-</tr>
-<tr>
-<td style="text-align:center">4XX</td>
-<td style="text-align:center">Client Error（客户端错误状态码）</td>
-<td style="text-align:center">服务器无法处理请求</td>
-</tr>
-<tr>
-<td style="text-align:center">5XX</td>
-<td style="text-align:center">Server Error（服务器错误状态码）</td>
-<td style="text-align:center">服务器处理请求出错</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>1. 1XX 信息</strong></p>
-<p>100 Continue ：表明到目前为止都很正常，客户端可以继续发送请求或者忽略这个响应。</p>
-<p><strong>2. 2XX 成功</strong></p>
-<p>200 OK</p>
-<p>204 No Content ：请求已经成功处理，但是返回的响应报文不包含实体的主体部分。一般在只需要从客户端往服务器发送信息，而不需要返回数据时使用。</p>
-<p>206 Partial Content ：表示客户端进行了范围请求，响应报文包含由 Content-Range 指定范围的实体内容。</p>
-<p><strong>3. 3XX 重定向</strong></p>
-<p>301 Moved Permanently ：永久性重定向</p>
-<p>302 Found ：临时性重定向</p>
-<p>303 See Other ：和 302 有着相同的功能，但是 303 明确要求客户端应该采用 GET 方法获取资源。</p>
-<p><strong>4. 4XX 客户端错误</strong></p>
-<p>400 Bad Request ：请求报文中存在语法错误。</p>
-<p>401 Unauthorized ：该状态码表示发送的请求需要有认证信息（BASIC 认证、DIGEST 认证）。如果之前已进行过一次请求，则表示用户认证失败。</p>
-<p>403 Forbidden ：请求被拒绝。</p>
-<p>404 Not Found</p>
-<p><strong>5. 5XX 服务器错误</strong></p>
-<p>500 Internal Server Error ：服务器正在执行请求时发生错误。</p>
-<p>503 Service Unavailable ：服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/HTTP/243074?fr=aladdin">1.百度百科-HTTP</a></p>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/leetbook/read/tech-interview-cookbook/o9ga26/">2.校招基础知识详解-HTTP</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.2.2">3.rfc2616：3.2.2 http URL</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/x1037490413/article/details/117704060">4.http协议以及如何在谷歌控制台查看通信报文</a></p>
+<h2 id="机器学习算法基础"><a href="#机器学习算法基础" class="headerlink" title="机器学习算法基础"></a>机器学习算法基础</h2><h3 id="SVM"><a href="#SVM" class="headerlink" title="SVM"></a>SVM</h3><p>在这个实验中，<strong>支持向量机（Support Vector Macchine,简称SVM）</strong> 被用来解决分类问题。目的是找出区间最大的划分超平面。SVM的基本类型是<br><img src="https://pic.imgdb.cn/item/62a93fc309475431297f94bc.png" alt=""><br>对于高维特征空间，可以通过训练样本的 <strong>核函数（Kernel）</strong> 展开模型的最优解，获得支持向量展开<br><img src="https://pic.imgdb.cn/item/62a93fc309475431297f9466.png" alt=""></p>
+<h3 id="核函数"><a href="#核函数" class="headerlink" title="核函数"></a>核函数</h3><h4 id="1-线性核"><a href="#1-线性核" class="headerlink" title="1.线性核"></a>1.线性核</h4><p>线性核（Linear Kernel）的实现使用sklearn库中SVC函数的默认参数 <strong><em>(‘ linear ‘)</em></strong> 。<br>线性核函数是：<br><img src="https://pic.imgdb.cn/item/62a93fc309475431297f9471.png" alt=""></p>
+<h4 id="2-径向基核"><a href="#2-径向基核" class="headerlink" title="2.径向基核"></a>2.径向基核</h4><p>径向基核函数(Radial Basis Function,简称RBF，也叫高斯核)的实现也使用了sklearn库中SVC函数的默认参数 <strong><em>(‘ rbf ‘)</em></strong> 。<br>RBF核函数为：<br><img src="https://pic.imgdb.cn/item/62a93fc309475431297f9486.png" alt=""></p>
+<h4 id="3-自定义核函数"><a href="#3-自定义核函数" class="headerlink" title="3.自定义核函数"></a>3.自定义核函数</h4><p>利用 <strong>核函数的性质</strong> 构造了一个新的核函数: 两个核函数的直积也是一个核函数。<br>К1 是线性核，К2 是拉普拉斯核：<br><img src="https://pic.imgdb.cn/item/62a945890947543129873256.png" alt=""></p>
+<p>自定义一个核函数： К1 ⊗ К2.<br>К1和К2的内核函数是通过自己编写的python函数实现的，在径向基和线性核的编程过程中展示了更多的细节。<br><img src="https://pic.imgdb.cn/item/62a94252094754312983607a.png" alt=""></p>
+<h3 id="python工具包"><a href="#python工具包" class="headerlink" title="python工具包"></a>python工具包</h3><p>Python的scikit-learn库有SVC工具包，可以自定义以下参数。<br><strong><em>C: float, default=1.0</em></strong><br>-正则化参数<br><strong><em>Kernel {‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’}, default=’rbf’</em></strong><br><strong><em>Degree: int, default=3</em></strong><br>-Degree是多项式核函数 <strong><em>(‘ poly ‘)</em></strong> 的阶数，其他核基本忽略该参数。<br>有很多参数，但在本次实验中，只修改了核函数，其他参数使用默认值。</p>
+<h2 id="实验结果展示"><a href="#实验结果展示" class="headerlink" title="实验结果展示"></a>实验结果展示</h2><p>JupyterLab的python程序运行结果：<br><img src="https://pic.imgdb.cn/item/62a93fc309475431297f9495.png" alt=""></p>
+<p>从结果来看:<br>首先，展示测试图像。每个标签显示三张图片，按照000-999的矩阵输出，对应的数字如图所示。<br>然后分别用 <strong>线性核函数、径向基核函数、自定义核函数</strong> 三种核函数构造SVM，用训练集进行模型训练，用测试集衡量识别精度，输出识别准确率评价指标按顺序显示。<br>ps.从结果看，自定义核并不适合这个任务。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>1.Mnist-image数据集下载: <a target="_blank" rel="noopener" href="http://yann.lecun.com/exdb/mnist/">http://yann.lecun.com/exdb/mnist/</a></p>
+<p>2.scikit-learn库的安装和SVC的API:<br><a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/index.html">https://scikit-learn.org/stable/index.html</a></p>
+<p>3.《机器学习（周立华）》（西瓜书）</p>
  
       <!-- reward -->
       
@@ -315,12 +180,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/05/30/006-HTTP-HTTPS/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/06/04/007-SVM/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li></ul>
 
     </footer>
   </div>
@@ -328,19 +193,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/06/15/007-SVM/" class="article-nav-link">
+      <a href="/2022/06/08/008-k-means/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            007. 机器学习：支持向量机（SVM）课堂实践
+            008. 机器学习：聚类任务和k_means算法课堂实践
           
         </div>
       </a>
     
     
-      <a href="/2022/03/16/005-TCP-IP/" class="article-nav-link">
+      <a href="/2022/04/30/006-HTTP-HTTPS/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">005. UDP/TCP协议详解</div>
+        <div class="article-nav-title">006. HTTP协议详解</div>
       </a>
     
   </nav>
