@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-15T05:30:13.177Z</updated>
+  <updated>2022-06-15T05:32:57.136Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>010. hexo配置过程中遇到的问题汇总</title>
     <link href="http://example.com/2022/06/15/010-hexo-problems/"/>
     <id>http://example.com/2022/06/15/010-hexo-problems/</id>
     <published>2022-06-15T05:19:41.000Z</published>
-    <updated>2022-06-15T05:30:13.177Z</updated>
+    <updated>2022-06-15T05:32:57.136Z</updated>
     
     
     <summary type="html">&lt;p&gt;在hexo配置个人主页的过程中，遇到一些环境配置问题，在这里整理一下大神们的解决办法：&lt;/p&gt;
@@ -46,7 +46,7 @@
     
     
     <summary type="html">&lt;p&gt;这是在学习《机器学习基础》课程的&lt;strong&gt;神经网络&lt;/strong&gt;这一章时，做的期末大作业，详见《机器学习（周立华）》第五章，记录一下以便回顾。&lt;/p&gt;
-&lt;p&gt;数据集: kaggle车辆分割数据集&lt;br&gt;完整代码见github：&lt;a href=&quot;https://github.com/KennanYang/Kaggle_car_segmentation&quot;&gt;车辆分割任务和卷积神经网络课堂实践&lt;/a&gt;&lt;/p&gt;</summary>
+&lt;p&gt;数据集: kaggle车辆分割数据集&lt;br&gt;完整代码见github：&lt;a href=&quot;https://github.com/KennanYang/Kaggle_car_segmentation&quot;&gt;车辆分割任务和卷积神经网络课堂实践&lt;/a&gt;&lt;br&gt;</summary>
     
     
     
@@ -132,7 +132,7 @@
     <updated>2022-06-15T01:41:12.500Z</updated>
     
     
-    <summary type="html">&lt;p&gt;面试中频繁问到UDP&amp;#x2F;TCP协议，但是经常只知其表，不知其里，因此在这里做一个总结，尽量涵盖可能问到的问题。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;面试中频繁问到UDP/TCP协议，但是经常只知其表，不知其里，因此在这里做一个总结，尽量涵盖可能问到的问题。&lt;/p&gt;</summary>
     
     
     
@@ -152,7 +152,7 @@
     
     
     <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://c.biancheng.net/view/3390.html&quot;&gt;《c语言学习网》数据结构总结——树&lt;/a&gt;&lt;br&gt;本文旨在根据教程巩固树的数据结构知识和c语言指针的应用，记录一下自己学习过程中的代码，知识讲解参考教程。&lt;/p&gt;
-&lt;h2 id=&quot;一、树的基本概念和术语&quot;&gt;&lt;a href=&quot;#一、树的基本概念和术语&quot; class=&quot;headerlink&quot; title=&quot;一、树的基本概念和术语&quot;&gt;&lt;/a&gt;一、树的基本概念和术语&lt;/h2&gt;&lt;p&gt;树结构是一种非线性存储结构，存储的是具有“一对多”关系的数据元素的集合。如图 是使用树结构存储的集合 {A,B,C,D,E,F,G,H,I,J,K,L,M} 的示意图。对于数据 A 来说，和数据 B、C、D 有关系；对于数据 B 来说，和 E、F 有关系。这就是“一对多”的关系。&lt;br&gt;&lt;img src=&quot;https://imgconvert.csdnimg.cn/aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTA0MjcvMDk0NDMwMTQ5My0wLnBuZw?x-oss-process=image/format,png&quot; alt=&quot;图 1（A）树的示例&quot;&gt;&lt;/p&gt;</summary>
+&lt;h2 id=&quot;一、树的基本概念和术语&quot;&gt;&lt;a href=&quot;#一、树的基本概念和术语&quot; class=&quot;headerlink&quot; title=&quot;一、树的基本概念和术语&quot;&gt;&lt;/a&gt;一、树的基本概念和术语&lt;/h2&gt;&lt;p&gt;树结构是一种非线性存储结构，存储的是具有“一对多”关系的数据元素的集合。如图 是使用树结构存储的集合 {A,B,C,D,E,F,G,H,I,J,K,L,M} 的示意图。对于数据 A 来说，和数据 B、C、D 有关系；对于数据 B 来说，和 E、F 有关系。这就是“一对多”的关系。&lt;br&gt;&lt;img src=&quot;https://imgconvert.csdnimg.cn/aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTA0MjcvMDk0NDMwMTQ5My0wLnBuZw?x-oss-process=image/format,png&quot; alt=&quot;图 1（A）树的示例&quot;&gt;&lt;br&gt;</summary>
     
     
     
@@ -200,7 +200,7 @@
     <updated>2022-03-02T00:05:07.546Z</updated>
     
     
-    <summary type="html">&lt;p&gt;最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。&lt;br&gt;前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。&lt;br&gt;前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。&lt;br&gt;</summary>
     
     
     
@@ -222,7 +222,7 @@
     <summary type="html">&lt;p&gt;我在用电脑训练CNN时遇到了性能瓶颈（显存不够），当得知实验室的服务器算力更强时，去请教师兄怎么连。&lt;/p&gt;
 &lt;p&gt;实验室的师兄甩过来服务器的ip和用户名密码，说直接连就行。&lt;/p&gt;
 &lt;p&gt;直接连？linux都不太会用的小白，咋连？&lt;/p&gt;
-&lt;p&gt;首先确保连接到实验室的网络，我这边是用校园网或者挂校园网的VPN，然后有下面几种配置方法（方法应该很多，只是列出了我尝试过的这三种）：&lt;/p&gt;</summary>
+&lt;p&gt;首先确保连接到实验室的网络，我这边是用校园网或者挂校园网的VPN，然后有下面几种配置方法（方法应该很多，只是列出了我尝试过的这三种）：&lt;br&gt;</summary>
     
     
     
@@ -243,7 +243,7 @@
     <updated>2022-03-02T00:47:54.603Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;strong&gt;Hello world&lt;/strong&gt;&lt;br&gt;欢迎来到我的博客，我是Kennan，一名计算机专业的研究生。以前在不同的地方写一些文章博客，但会受到平台的各种限制和广告。&lt;br&gt;这里在前辈的指导下，通过 &lt;a href=&quot;https://docs.github.com/en/pages&quot;&gt;github pages平台&lt;/a&gt; 和 &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo博客框架&lt;/a&gt; 搭建了一个自己的个人主页，在上面分享一些自己的经历和学习心得。&lt;br&gt;下面记录一下我的搭建过程，请多多指教，一些相关文件可参考我的 &lt;a href=&quot;https://github.com/KennanYang/KennanYang.github.io&quot;&gt;KennanYang.github.io&lt;/a&gt; 项目&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Hello world&lt;/strong&gt;&lt;br&gt;欢迎来到我的博客，我是Kennan，一名计算机专业的研究生。以前在不同的地方写一些文章博客，但会受到平台的各种限制和广告。&lt;br&gt;这里在前辈的指导下，通过 &lt;a href=&quot;https://docs.github.com/en/pages&quot;&gt;github pages平台&lt;/a&gt; 和 &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo博客框架&lt;/a&gt; 搭建了一个自己的个人主页，在上面分享一些自己的经历和学习心得。&lt;br&gt;下面记录一下我的搭建过程，请多多指教，一些相关文件可参考我的 &lt;a href=&quot;https://github.com/KennanYang/KennanYang.github.io&quot;&gt;KennanYang.github.io&lt;/a&gt; 项目&lt;br&gt;</summary>
     
     
     
